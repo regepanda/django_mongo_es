@@ -69,7 +69,6 @@ class EsClientConnection:
         temp = [dict] * (len(dataList) * 2)
         temp[::2] = insertHeadInfoList
         temp[1::2] = dataList
-        exit()
         try:
             return self.conn.bulk(index=index, doc_type=type, body=temp)
         except Exception as e:
