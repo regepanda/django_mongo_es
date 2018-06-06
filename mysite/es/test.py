@@ -33,7 +33,7 @@ def test1():
 def test2():
     es = EsClientConnection('127.0.0.1:9200', 'test', 'people', test_mappings)
     lists = [
-        {"name": }
+        {'name': 'pl', 'age': 25, 'sex': '男'}
     ]
     es.insertDataFrame('test', 'people', lists)
 test2()
