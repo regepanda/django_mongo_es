@@ -38,4 +38,11 @@ def test2():
         {'name': 'zhaoguoyu', 'age': 26, 'sex': '男'}
     ]
     es.insertDataFrame('test', 'people', lists)
-test2()
+
+
+def test3():
+    res = list(filter(lambda x:x>20,[i for i in range(50)]))
+    print(res)
+
+
+test3()
