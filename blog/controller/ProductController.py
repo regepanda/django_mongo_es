@@ -28,7 +28,7 @@ def index(request):
             }
         }
     }
-    result = es.searchDoc('product', 'tour_product', body)
+    result = es.searchDoc('product', 'tour_product', body1)
     result = result['hits']['hits']
     lists = []
     for product in result:
