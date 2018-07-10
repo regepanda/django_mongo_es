@@ -2,7 +2,6 @@ from django.http import HttpResponse
 from mysite.es.EsClientConnection import EsClientConnection
 from config.es_config import index_mappings
 import json
-import types
 
 
 def index(request):
@@ -23,12 +22,12 @@ def index(request):
     }
     body = {
         "query": {
-            "term": {
-                "name": "制"
+            "match": {
+                "name": "美西小精鹰微留学"
             }
         }
     }
-    result = es.searchDoc('product', 'tour_product', body1)
+    result = es.searchDoc('product', 'tour_product', body)
     result = result['hits']['hits']
     lists = []
     for product in result:
